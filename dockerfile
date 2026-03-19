@@ -20,7 +20,7 @@ RUN mvn clean install
 
 ## 6. Execução
 
-FROM openjdk:21-jdk-slim
+FROM openjdk-21-jdk-slim
 
 ## 7. Abrir a porta padrão do Spring
 
