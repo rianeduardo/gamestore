@@ -17,17 +17,19 @@ public class GameController {
 
     @GetMapping("/game-list")
     public ModelAndView abrirGameList() {
-        ModelAndView mv = new ModelAndView("/games/list");
+        ModelAndView mv = new ModelAndView("list");
         mv.addObject("games", gr.findAll());
         return mv;
     }
 
     @GetMapping("/game-add")
-    public String getGameAdd() {
-        return "/games/add";
+    public ModelAndView getGameAdd() {
+        ModelAndView mv = new ModelAndView("add");
+        mv.addObject("game", new Game());
+        return mv;
     }
 
-    @PostMapping("")
+    @PostMapping("/game-add")
     public String postMethodName(Game game, RedirectAttributes redirectAttributes) {
         gr.save(game);
         redirectAttributes.addFlashAttribute("msg", "Sucesso! Game cadastrado");
