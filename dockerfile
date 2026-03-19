@@ -20,7 +20,7 @@ RUN mvn clean install
 
 ## 6. Execução
 
-FROM eclipse-temurin:21-jdk-slim
+FROM eclipse-temurin:21-jdk-jammy
 
 ## 7. Abrir a porta padrão do Spring
 
