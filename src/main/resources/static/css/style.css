@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    padding: 15px 30px;
+}
+
+.logo {
+    color: #fff;
+    margin: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.nav-links li a:hover {
+    color: #00c3ff;
+}
+
+.container {
+    padding: 40px;
+    text-align: center;
+}
+
+.game-table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+.game-table th,
+.game-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.game-table th {
+    background-color: #333;
+    color: white;
+}
+
+.game-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.game-form {
+    width: 300px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.game-form label {
+    text-align: left;
+    font-weight: bold;
+}
+
+.game-form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.game-form button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #00c3ff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.game-form button:hover {
+    background-color: #009ac7;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

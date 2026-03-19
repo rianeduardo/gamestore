@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Listar Games | GameStore</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+    <div th:replace="fragments/header :: header"></div>
+
+    <main class="container">
+        <h2>📋 Lista de Games</h2>
+
+        <table class="game-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Desenvolvedores</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="game : ${games}">
+                    <td th:text="${game.id}"></td>
+                    <td th:text="${game.nome}"></td>
+                    <td th:text="${game.preco}"></td>
+                    <td th:text="${game.desenvolvedores}"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p th:if="${#lists.isEmpty(games)}">Nenhum game cadastrado.</p>
+    </main>
+
+    <div th:replace="fragments/footer :: footer"></div>
+
+</body>
+
+</html>

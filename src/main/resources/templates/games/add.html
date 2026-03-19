@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Game | GameStore</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+    <div th:replace="fragments/header :: header"></div>
+
+    <main class="container">
+        <h2>➕ Cadastrar Novo Game</h2>
+
+        <form th:action="@{/games}" th:object="${game}" method="post" class="game-form">
+
+            <label>Nome:</label>
+            <input type="text" th:field="*{nome}" required>
+
+            <label>Gênero:</label>
+            <input type="text" th:field="*{genero}" required>
+
+            <label>Preço:</label>
+            <input type="number" step="0.01" th:field="*{preco}" required>
+
+            <button type="submit">Salvar</button>
+        </form>
+    </main>
+
+    <div th:replace="fragments/footer :: footer"></div>
+
+</body>
+
+</html>

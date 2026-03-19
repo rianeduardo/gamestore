@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GameStore</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+    <header th:fragment="header">
+        <nav class="navbar">
+            <h1 class="logo">🎮 GameStore</h1>
+            <ul class="nav-links">
+                <li><a th:href="@{/}">Home</a></li>
+                <li><a th:href="@{/game-add}">Cadastrar Game</a></li>
+                <li><a th:href="@{/game-list}">Listar Games</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>
