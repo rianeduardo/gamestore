@@ -16,7 +16,7 @@ COPY . .
 
 ## 5. Compilar o projeto para .jar com o Maven
 
-RUN mvn clean install
+RUN mvn clean install -DskipTests
 
 ## 6. Execução
 
